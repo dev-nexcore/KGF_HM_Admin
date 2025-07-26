@@ -23,6 +23,7 @@ export default function AdminHeader() {
           />
         </button>
 
+
         {/* Avatar placeholder */}
         <div className="w-10 h-10 bg-white rounded-full" />
       </div>
