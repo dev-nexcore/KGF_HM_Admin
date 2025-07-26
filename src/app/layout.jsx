@@ -1,6 +1,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import "@fontsource/inter"; // This loads default weights
+
+import { Poppins } from "next/font/google"; // 🆕 import Poppins
 import "./globals.css";
 
+// Existing fonts
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -9,6 +13,13 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+// 🆕 Add Poppins config
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], // You can customize this
 });
 
 export const metadata = {
@@ -20,7 +31,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
       >
         {children}
       </body>
