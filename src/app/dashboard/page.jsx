@@ -1,4 +1,4 @@
-import Dashboard from "@/components/admindashboard/dashboard";
+import Dashboard from "@/app/components/admindashboard/dashboard";
 
 function AdminDashboard() {
   return (

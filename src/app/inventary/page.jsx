@@ -1,4 +1,4 @@
-import InventoryList from "@/components/admininventary/inventory";
+import InventoryList from "@/app/components/admininventary/inventory";
 
 function AdminInventory() {
   return (
