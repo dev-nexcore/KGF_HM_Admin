@@ -1,11 +1,13 @@
-import StudentManagement from "@/components/home/management/management";
-import AddNewItem from "@/components/home/newitem/newitem";
 
-export default function Home() {
+import AdminLogin from "@/app/components/adminlogin/login";
+
+function Login() {
   return (
     <>
-      {/* <AddNewItem /> */}
-      <StudentManagement/>
+      <AdminLogin/>
+ 
     </>
   );
 }
+
+export default Login;
