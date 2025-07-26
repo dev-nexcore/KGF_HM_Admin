@@ -52,7 +52,7 @@ export default function Sidebar() {
       {/* Menu Items */}
       <ul className="
         space-y-1
-        xs:flex xs:space-y-0 xs:space-x-2 xs:flex-1 xs:overflow-x-auto
+        xs:flex xs:space-y-0 xs:space-x-2 xs:flex-1 xs:overflow-x-auto text-lg
       ">
         {menuItems.map((item) => {
           const isActive = active === item.label;
