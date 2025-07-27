@@ -229,7 +229,7 @@ const StudentManagement = () => {
       style={{ fontFamily: "Poppins", fontWeight: "500" }}
     >
       {/* Header */}
-      <div className="w-full max-w-7xl mx-auto mb-8 ml-4">
+      <div className="w-full max-w-7xl mx-auto mb-8 px-4">
         <h1
           className="text-[25px] leading-[25px] font-extrabold text-[#000000] text-left"
           style={{
