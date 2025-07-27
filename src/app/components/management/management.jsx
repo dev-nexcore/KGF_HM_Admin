@@ -480,8 +480,8 @@ const StudentManagement = () => {
               value={formData.feeStatus}
               onChange={handleInputChange}
               placeholder="Paid"
-              className="w-full px-4 bg-white rounded-[10px] border-0 outline-none placeholder-gray-500 text-black"
-              style={inputStyle}
+              className="px-4 bg-white rounded-[10px] border-0 outline-none placeholder-gray-500 text-black"
+              style={{...inputStyle, width: "300px", maxWidth: "100%"}}
             />
           </div>
         </div>
