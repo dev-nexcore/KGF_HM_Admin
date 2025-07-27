@@ -234,7 +234,6 @@ const StudentManagement = () => {
           className="text-[25px] leading-[25px] font-extrabold text-[#000000] text-left"
           style={{
             fontFamily: "Inter",
-            textShadow: "0.5px 0.5px 0 black",
           }}
         >
           <span className="border-l-4 border-red-500 pl-2 inline-flex items-center h-[25px]">
@@ -258,7 +257,7 @@ const StudentManagement = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {/* Student Name */}
           <div>
-            <label className="block mb-1 text-black" style={labelStyle}>
+            <label className="block mb-1 text-black ml-2" style={labelStyle}>
               Student Name
             </label>
             <input
@@ -276,7 +275,7 @@ const StudentManagement = () => {
 
           {/* Student ID */}
           <div>
-            <label className="block mb-1 text-black" style={labelStyle}>
+            <label className="block mb-1 text-black ml-2" style={labelStyle}>
               Student ID
             </label>
             <input
@@ -295,7 +294,7 @@ const StudentManagement = () => {
 
           {/* Contact Number */}
           <div>
-            <label className="block mb-1 text-black" style={labelStyle}>
+            <label className="block mb-1 text-black ml-2" style={labelStyle}>
               Contact Number
             </label>
             <input
@@ -313,7 +312,7 @@ const StudentManagement = () => {
 
           {/* Email */}
           <div>
-            <label className="block mb-1 text-black" style={labelStyle}>
+            <label className="block mb-1 text-black ml-2" style={labelStyle}>
               E-Mail
             </label>
             <input
@@ -331,7 +330,7 @@ const StudentManagement = () => {
 
           {/* Room/Bed Number */}
           <div>
-            <label className="block mb-1 text-black font-[500] text-[18px] leading-[22px] text-left">
+            <label className="block mb-1 text-black font-[500] text-[18px] leading-[22px] text-left ml-2">
               Room/Bed Number
             </label>
 
@@ -383,7 +382,7 @@ const StudentManagement = () => {
 
           {/* Emergency Contact Number */}
           <div>
-            <label className="block mb-2 text-black" style={labelStyle}>
+            <label className="block mb-2 text-black ml-2" style={labelStyle}>
               Emergency Contact Number
             </label>
             <input
@@ -400,7 +399,7 @@ const StudentManagement = () => {
 
           {/* Admission Date */}
           <div>
-            <label className="block mb-1 text-black" style={labelStyle}>
+            <label className="block mb-1 text-black ml-2" style={labelStyle}>
               Admission Date
             </label>
             <div className="relative flex items-center">
@@ -439,7 +438,7 @@ const StudentManagement = () => {
 
                   {/* Styled fake input that displays the selected date */}
                   <div
-                    className="bg-white rounded-[10px] border border-gray-300 px-4 
+                    className="bg-white rounded-[10px]  px-4 
             h-[38px] flex items-center font-[Poppins] font-semibold text-[15px] 
             tracking-widest text-gray-800 select-none z-10 shadow-[0px_4px_10px_0px_#00000040]"
                   >
@@ -497,7 +496,7 @@ const StudentManagement = () => {
           {/* Emergency Contact Name */}
           <div>
             <label
-              className="block mb-1 text-black font-[500] text-[10px]  ml-2"
+              className="block mb-2 text-black font-[500] text-[10px]  ml-2"
               style={labelStyle}
             >
               Emergency Contact Name
@@ -517,7 +516,7 @@ const StudentManagement = () => {
           {/* Fee Status */}
           <div>
             <label
-              className="block mb-1 text-black font-[500] text-[10px] ml-2"
+              className="block mb-2 text-black font-[500] text-[10px] ml-2"
               style={labelStyle}
             >
               Fee Status
