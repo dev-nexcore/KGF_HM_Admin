@@ -1,5 +1,5 @@
 import React from 'react'
-import AuditLogsSection from '../components/adminaudit/adminaudit'
+import AuditLogsSection from '../components/audit/audit'
  
 
 export default function page() {

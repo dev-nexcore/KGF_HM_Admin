@@ -19,7 +19,7 @@ export default function LayoutWrapper({ children }) {
       ) : (
         <div className="flex">
           {/* Sidebar */}
-          <div className="fixed top-0 left-0 h-screen w-60 z-50 bg-[#8A9774]">
+          <div className="fixed top-0 left-0 h-screen w-60 z-50">
             <Sidebar />
           </div>
 
