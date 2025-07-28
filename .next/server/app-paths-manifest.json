@@ -1,0 +1,15 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/audit/page": "app/audit/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/management/page": "app/management/page.js",
+  "/newitem/page": "app/newitem/page.js",
+  "/page": "app/page.js",
+  "/processsalary/page": "app/processsalary/page.js",
+  "/refunds/page": "app/refunds/page.js",
+  "/staffallotment/page": "app/staffallotment/page.js",
+  "/staffsalary/page": "app/staffsalary/page.js",
+  "/taxpf/page": "app/taxpf/page.js",
+  "/ticket/page": "app/ticket/page.js"
+}

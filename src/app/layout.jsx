@@ -3,9 +3,8 @@ import "@fontsource/inter"; // This loads default weights
 
 import { Poppins } from "next/font/google"; // 🆕 import Poppins
 import "./globals.css";
-import LayoutWrapper from "./components/LayoutWrapper"; // NEW
-import AdminHeader from "./components/home/navbar";
-import Navbar from "./components/home/navbar";
+import LayoutWrapper from "@/components/LayoutWrapper";// NEW
+
 
 // Existing fonts
 const geistSans = Geist({

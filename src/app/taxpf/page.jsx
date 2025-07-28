@@ -1,9 +1,9 @@
-import TaxPf from "../components/taxpf/taxpf";
+import TaxPf from "@/components/taxpf/taxpf";
 
 export default function TaxPfPage(){
     return(
         <div>
-            <TaxPf/>
+          <TaxPf/>
         </div>
     )
 }

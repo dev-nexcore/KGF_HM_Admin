@@ -1,11 +1,11 @@
-import React from 'react'
-import AuditLogsSection from '../components/audit/audit'
+import AuditLogsSection from "@/components/audit/audit";
+
  
 
 export default function page() {
   return (
     <div>
-      <AuditLogsSection/>
+   <AuditLogsSection/>
     </div>
   )
 }

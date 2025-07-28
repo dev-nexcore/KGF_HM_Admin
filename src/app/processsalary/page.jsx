@@ -1,9 +1,11 @@
-import ProcessStaffSalary from '@/app/components/processsalary/processsalary';
+import ProcessStaffSalary from "@/components/processsalary/processsalary";
+
+
 
 export default function ProcessSalaryPage() {
   return (
     <div>
-        <ProcessStaffSalary/>
+    <ProcessStaffSalary/>
     </div>
   );
 }

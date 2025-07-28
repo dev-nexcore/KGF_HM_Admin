@@ -1,9 +1,10 @@
-import AddNewItem from "../components/newitem/newitem";
+import AddNewItem from "@/components/newitem/newitem";
+
 
 function Item() {
   return (
     <>
-      <AddNewItem />
+     <AddNewItem/>
     </>
   );
 }

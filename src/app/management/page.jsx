@@ -1,5 +1,5 @@
-import StudentManagement from "../components/management/management";
-import AddNewItem from "../components/newitem/newitem";
+import StudentManagement from "@/components/management/management";
+
 
 function Management() {
   return (
