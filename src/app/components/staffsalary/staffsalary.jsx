@@ -49,29 +49,47 @@ export default function StaffSalary() {
   const [selectedMonth, setSelectedMonth] = useState("September 2025")
 
   return (
-    <div className="p-6 bg-gray-50 min-h-screen">
+    <div className="p-6 mt-5 min-h-screen">
       <div className="max-w-7xl mx-auto space-y-6">
-        {/* Header with red line */}
+        {/* Header */}
         <div className="flex items-center gap-2">
           <div className="w-1 h-6 bg-red-500"></div>
           <h1 className="text-2xl font-semibold text-gray-900">Staff Salary</h1>
         </div>
 
-        {/* Summary Cards */}
+        {/* Summary Cards with deep inset shadow */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="rounded-xl shadow-xl p-8 border-none" style={{ backgroundColor: "#ADCE8C" }}>
+          <div
+            className="rounded-xl p-8 border-none"
+            style={{
+              backgroundColor: "#ADCE8C",
+              boxShadow: "0px 6px 12px rgba(0, 0, 0, 0.)"
+            }}
+          >
             <div className="text-lg text-center font-semibold text-black mb-3">Total PAYROLL COST</div>
             <hr className="border-gray-600 mb-4" />
             <div className="text-2xl text-center font-bold text-gray-900">₹ 1,20,000</div>
           </div>
 
-          <div className="rounded-lg p-8 border-none" style={{ backgroundColor: "#ADCE8C" }}>
+          <div
+            className="rounded-lg p-8 border-none"
+            style={{
+              backgroundColor: "#ADCE8C",
+              boxShadow: "0px 6px 12px rgba(0, 0, 0, 0.2)"
+            }}
+          >
             <div className="text-lg text-center font-semibold text-black mb-3">Total DEDUCTIONS</div>
             <hr className="border-gray-600 mb-4" />
             <div className="text-2xl text-center font-bold text-gray-900">₹ 15,000</div>
           </div>
 
-          <div className="rounded-lg p-8 border-none" style={{ backgroundColor: "#ADCE8C" }}>
+          <div
+            className="rounded-lg p-8 border-none"
+            style={{
+              backgroundColor: "#ADCE8C",
+              boxShadow: "0px 6px 12px rgba(0, 0, 0, 0.2",
+            }}
+          >
             <div className="text-lg text-center font-semibold text-black mb-3">Total PAYOUT</div>
             <hr className="border-gray-600 mb-4" />
             <div className="text-2xl text-center font-bold text-gray-900">₹ 1,05,000</div>
@@ -81,7 +99,7 @@ export default function StaffSalary() {
         {/* Action Buttons */}
         <div className="flex gap-5">
           <button
-            className="px-4 py-2 rounded-md text-gray-900 border-none text-sm font-semibold cursor-pointer shadow-md hover:opacity-90"
+            className="px-4 py-2 rounded-md text-gray-900 border-none text-sm font-semibold cursor-pointer shadow-[0_4px_0px_rgba(0,0,0,0.7)] hover:opacity-90"
             style={{ backgroundColor: "#ADCE8C" }}
           >
             Payroll Management
@@ -110,7 +128,7 @@ export default function StaffSalary() {
           </div>
 
           <div className="flex items-center gap-5">
-            <button className="px-4 py-2  text-[#7BAC4A] font-semibold shadow-lg rounded-md text-sm cursor-pointer">
+            <button className="px-4 py-2 text-[#7BAC4A] font-semibold shadow-lg rounded-md text-sm cursor-pointer">
               Generate Pay Slips
             </button>
 
@@ -156,9 +174,7 @@ export default function StaffSalary() {
           `}</style>
           <table className="custom-table w-full border-collapse">
             <thead>
-                 <tr>
-    <td colSpan="9" className="py-2"></td> {/* spacer row */}
-  </tr>
+              <tr><td colSpan="9" className="py-2"></td></tr>
               <tr className="bg-white">
                 <th className="font-bold text-gray-900 px-4 py-4 text-center">Name</th>
                 <th className="font-bold text-gray-900 px-4 py-4 text-center">Role</th>

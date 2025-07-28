@@ -52,7 +52,7 @@ const StaffAllotment = () => {
   }
 
   return (
-    <div className="flex-1 bg-[#f3f4f6] p-6 mt-5">
+    <div className="flex-1 p-6 mt-5">
       <div className="mb-6">
         <div className="flex items-center mb-4">
           <div className="w-[3px] h-8 bg-red-600 mr-3" />
@@ -61,7 +61,8 @@ const StaffAllotment = () => {
       </div>
 
       {/* Register New Warden Section */}
-      <div className="bg-[#cbd0bb] rounded-xl p-6 mb-6">
+      <div className="bg-[#BEC5AD] rounded-xl p-6 mb-6" 
+      style={{ boxShadow: "0px 4px 20px 0px #00000040 inset"}}>
         <h2 className="text-2xl font-semibold text-black mb-6">Register New Warden</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div>
@@ -167,7 +168,9 @@ const StaffAllotment = () => {
       </div>
 
       {/* Manage Warden Shifts Section */}
-      <div className="bg-[#cbd0bb] rounded-xl p-6">
+      <div className="bg-[#BEC5AD] rounded-xl p-6"
+      style={{ boxShadow: "0px 4px 20px 0px #00000040 inset"}}>
+
         <h2 className="text-lg font-semibold text-black mb-4">Manage Warden Shifts</h2>
 
         <div className="w-full overflow-x-auto text-sm">
