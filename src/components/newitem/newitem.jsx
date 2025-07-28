@@ -331,28 +331,41 @@ function AddNewItem() {
             >
               Description (Optional)
             </label>
-            <textarea
-              id="description"
-              name="description"
-              value={formData.description}
-              onChange={handleInputChange}
-              rows={3}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500 resize-none"
-              style={{
-                width: "100%",
-                height: "75px",
-                backgroundColor: "#FFFFFF",
-                boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)",
-                borderRadius: "10px",
-                color: "#000000",
-                outline: "none",
-                border: "none",
-                padding: "12px 16px",
-                fontSize: "14px",
-                fontFamily: "Poppins",
-                resize: "none",
-              }}
-            />
+            <>
+              <textarea
+                id="description"
+                name="description"
+                value={formData.description}
+                onChange={handleInputChange}
+                rows={3}
+                placeholder="Enter description here..."
+                className="w-full px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500 resize-none"
+                style={{
+                  width: "100%",
+                  height: "90px",
+                  backgroundColor: "#FFFFFF",
+                  boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)",
+                  borderRadius: "10px",
+                  color: "#000000",
+                  border: "none",
+                  padding: "12px 16px",
+                  fontSize: "14px",
+                  fontFamily: "Poppins",
+                  resize: "none",
+                }}
+              />
+
+              <style>
+                {`
+      textarea::placeholder {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 12px;
+        color: #6B7280;
+      }
+                 `}
+              </style>
+            </>
           </div>
 
           {/* Purchase Date and Cost Section */}
@@ -406,7 +419,16 @@ function AddNewItem() {
                 <input
                   type="date"
                   ref={dateInputRef}
-                  style={{ display: "none" }}
+                  style={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "0",
+                    zIndex: 1002,
+                    width: "290px",
+                    height: "40px",
+                    opacity: 0,
+                    pointerEvents: "none",
+                  }}
                   onChange={(e) => {
                     setFormData((prev) => ({
                       ...prev,
@@ -432,7 +454,7 @@ function AddNewItem() {
                         if (dateInputRef.current.showPicker) {
                           dateInputRef.current.showPicker();
                         }
-                      }, 300);
+                      }, 3);
                     }
                   }}
                   className="flex-shrink-0 self-start sm:self-center cursor-pointer ml-4"
