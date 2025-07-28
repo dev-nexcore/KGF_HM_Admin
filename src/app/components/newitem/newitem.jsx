@@ -68,7 +68,7 @@ function AddNewItem() {
 
   const inputStyle = {
     width: "100%",
-    height: "51px",
+    height: "40px",
     backgroundColor: "#FFFFFF",
     boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)",
     borderRadius: "10px",
@@ -84,10 +84,13 @@ function AddNewItem() {
   };
 
   return (
-    <div className="min-h-screen bg-white p-3 sm:p-4 md:p-6 lg:p-8" style={{ backgroundColor: "#FFFFFF" }}>
+    <div
+      className="min-h-screen bg-white p-3 sm:p-4 md:p-6 lg:p-8"
+      style={{ backgroundColor: "#FFFFFF" }}
+    >
       <div className="w-full max-w-7xl mx-auto">
         <h1
-          className="mb-6 sm:mb-8 md:mb-10 text-2xl sm:text-3xl md:text-4xl font-bold text-black flex items-center"
+          className="mt-6 sm:mb-8 md:mb-10 text-2xl sm:text-3xl md:text-2xl font-bold text-black flex items-center ml-4"
           style={{
             fontFamily: "Inter",
             fontWeight: 700,
@@ -97,10 +100,10 @@ function AddNewItem() {
             color: "#000000",
           }}
         >
-          <span className="w-1 h-8 sm:h-10 md:h-12 bg-red-500 mr-2 sm:mr-3"></span>
+          <span className="w-1 h-8 sm:h-10 md:h-5 bg-red-500 mr-2 sm:mr-3"></span>
           <span>Add new Item</span>
         </h1>
-        
+
         <div
           className="rounded-lg sm:rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-10 w-full"
           style={{
@@ -114,11 +117,15 @@ function AddNewItem() {
             <div className="w-full">
               <label
                 htmlFor="itemName"
-                className="block text-sm font-medium text-gray-700 mb-2"
-                style={labelStyle}
+                className="block font-medium text-black mb-2 text-[18px] sm:text-[18px] md:text-[18px] lg:text-[18px] ml-4"
+                style={{
+                  fontFamily: "Poppins",
+                  lineHeight: "1.5",
+                }}
               >
                 Item Name
               </label>
+
               <input
                 id="itemName"
                 type="text"
@@ -134,8 +141,11 @@ function AddNewItem() {
             <div className="w-full">
               <label
                 htmlFor="location"
-                className="block text-sm font-medium text-gray-700 mb-2"
-                style={labelStyle}
+                className="block font-medium text-black mb-2 text-[18px] sm:text-[18px] md:text-[18px] lg:text-[18px] ml-4"
+                style={{
+                  fontFamily: "Poppins",
+                  lineHeight: "1.5",
+                }}
               >
                 Location
               </label>
@@ -154,8 +164,11 @@ function AddNewItem() {
             <div className="w-full">
               <label
                 htmlFor="barcodeId"
-                className="block text-sm font-medium text-gray-700 mb-2"
-                style={labelStyle}
+                className="block font-medium text-black mb-2 text-[18px] sm:text-[18px] md:text-[18px] lg:text-[18px] ml-4"
+                style={{
+                  fontFamily: "Poppins",
+                  lineHeight: "1.5",
+                }}
               >
                 Barcode ID
               </label>
@@ -174,8 +187,11 @@ function AddNewItem() {
             <div className="relative w-full">
               <label
                 htmlFor="status"
-                className="block text-sm font-medium text-gray-700 mb-2"
-                style={labelStyle}
+                className="block font-medium text-black mb-2 text-[18px] sm:text-[18px] md:text-[18px] lg:text-[18px] ml-4"
+                style={{
+                  fontFamily: "Poppins",
+                  lineHeight: "1.5",
+                }}
               >
                 Status
               </label>
@@ -184,13 +200,13 @@ function AddNewItem() {
                 name="status"
                 value={formData.status}
                 onChange={handleInputChange}
-                className="appearance-none w-full px-12 py-3 rounded-xl text-gray-800 bg-white font-medium text-[15px] shadow-[0px_4px_10px_rgba(0,0,0,0.25)] outline-none"
+                className="appearance-none w-full px-12 py-3 rounded-xl text-gray-800 bg-white font-medium text-[12px] shadow-[0px_4px_10px_rgba(0,0,0,0.25)] outline-none leading-[1.1]"
                 style={{
                   fontFamily: "Poppins",
-                  fontWeight: 500,
+                  fontWeight: 600,
                   border: "none",
-                  height: "51px",
-                  paddingLeft: "48px",
+                  height: "40px",
+                  paddingLeft: "20px",
                   paddingRight: "16px",
                   color: formData.status ? "#000000" : "#6B7280",
                   width: "100%",
@@ -215,17 +231,21 @@ function AddNewItem() {
               </select>
               {/* Right-positioned Arrow */}
               <svg
-                className="w-4 h-4 text-gray-600 absolute right-15 pointer-events-none"
+                className="w-4 h-4 text-gray-600 absolute right-10 pointer-events-none"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
                 viewBox="0 0 24 24"
                 style={{
                   top: "calc(60% + 12px)",
-                  transform: "translateY(-50%)"
+                  transform: "translateY(-50%)",
                 }}
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
               </svg>
             </div>
 
@@ -233,8 +253,11 @@ function AddNewItem() {
             <div className="relative w-full">
               <label
                 htmlFor="category"
-                className="block text-sm font-medium text-gray-700 mb-2"
-                style={labelStyle}
+                className="block font-medium text-black mb-2 text-[18px] sm:text-[18px] md:text-[18px] lg:text-[18px] ml-4"
+                style={{
+                  fontFamily: "Poppins",
+                  lineHeight: "1.5",
+                }}
               >
                 Category
               </label>
@@ -243,15 +266,15 @@ function AddNewItem() {
                 name="category"
                 value={formData.category}
                 onChange={handleInputChange}
-                className="appearance-none w-full px-12 py-3 rounded-xl text-gray-800 bg-white font-medium text-[15px] shadow-[0px_4px_10px_rgba(0,0,0,0.25)] outline-none"
+                className="appearance-none w-full px-12 py-3 rounded-xl text-gray-800 bg-white font-medium text-[12px] shadow-[0px_4px_10px_rgba(0,0,0,0.25)] outline-none leading-[1.1]"
                 style={{
                   fontFamily: "Poppins",
-                  fontWeight: 500,
+                  fontWeight: 600,
                   border: "none",
-                  height: "51px",
-                  paddingLeft: "40px",
-                  paddingRight: "48px",
-                  color: formData.category ? "#000000" : "#6B7280",
+                  height: "42px",
+                  paddingLeft: "20px",
+                  paddingRight: "16px",
+                  color: formData.status ? "#000000" : "#6B7280",
                   width: "100%",
                   borderRadius: "10px",
                 }}
@@ -284,10 +307,14 @@ function AddNewItem() {
                 viewBox="0 0 24 24"
                 style={{
                   top: "calc(60% + 12px)",
-                  transform: "translateY(-50%)"
+                  transform: "translateY(-50%)",
                 }}
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
               </svg>
             </div>
           </div>
@@ -296,8 +323,11 @@ function AddNewItem() {
           <div className="mt-6 sm:mt-8 w-full">
             <label
               htmlFor="description"
-              className="block text-sm font-medium text-gray-700 mb-2"
-              style={labelStyle}
+              className="block font-medium text-black mb-2 text-[18px] sm:text-[18px] md:text-[18px] lg:text-[18px] ml-4"
+              style={{
+                fontFamily: "Poppins",
+                lineHeight: "1.5",
+              }}
             >
               Description (Optional)
             </label>
@@ -310,7 +340,7 @@ function AddNewItem() {
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500 resize-none"
               style={{
                 width: "100%",
-                height: "91px",
+                height: "75px",
                 backgroundColor: "#FFFFFF",
                 boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)",
                 borderRadius: "10px",
@@ -328,11 +358,17 @@ function AddNewItem() {
           {/* Purchase Date and Cost Section */}
           <div className="mt-6 sm:mt-8">
             {/* Purchase Date */}
-            <div className="w-full mb-4 sm:mb-6" style={{ position: "relative", zIndex: 1000 }}>
+            <div
+              className="w-full mb-4 sm:mb-6"
+              style={{ position: "relative", zIndex: 1000 }}
+            >
               <label
                 htmlFor="purchaseDate"
-                className="block text-sm font-medium text-gray-700 mb-2"
-                style={labelStyle}
+                className="block font-medium text-black mb-2 text-[18px] sm:text-[18px] md:text-[18px] lg:text-[18px] ml-4"
+                style={{
+                  fontFamily: "Poppins",
+                  lineHeight: "1.5",
+                }}
               >
                 Purchase Date
               </label>
@@ -340,18 +376,20 @@ function AddNewItem() {
                 <input
                   id="purchaseDate"
                   ref={dateInputRef}
-                  type="date"
+                  type="text"
                   name="purchaseDate"
                   value={formData.purchaseDate}
                   onChange={handleInputChange}
-                  className="px-3 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
+                  placeholder="dd - mm - yyyy"
+                  readOnly
+                  className="w-full max-w-[290px] h-[40px] px-3 py-2 border border-gray-300 text-center text-[15px] font-medium font-[Poppins] text-gray-800 bg-white rounded-[10px] shadow-[0_4px_10px_rgba(0,0,0,0.25)] focus:outline-none focus:ring-2 focus:ring-gray-500 placeholder:text-gray-500 placeholder:font-medium placeholder:font-[Poppins] cursor-pointer"
                   style={{
                     backgroundColor: "#FFFFFF",
                     fontFamily: "Poppins",
                     fontWeight: 500,
-                    fontSize: "18px",
+                    fontSize: "15px",
                     lineHeight: "100%",
-                    letterSpacing: "64%",
+                    letterSpacing: "0.7em",
                     textAlign: "center",
                     color: formData.purchaseDate ? "#000000" : "#6B7280",
                     width: "100%",
@@ -362,6 +400,18 @@ function AddNewItem() {
                     zIndex: 1001,
                     outline: "none",
                     boxShadow: "0px 4px 10px 0px #00000040",
+                    cursor: "pointer",
+                  }}
+                />
+                <input
+                  type="date"
+                  ref={dateInputRef}
+                  style={{ display: "none" }}
+                  onChange={(e) => {
+                    setFormData((prev) => ({
+                      ...prev,
+                      purchaseDate: e.target.value,
+                    }));
                   }}
                 />
                 <svg
@@ -385,7 +435,7 @@ function AddNewItem() {
                       }, 300);
                     }
                   }}
-                  className="flex-shrink-0 self-start sm:self-center cursor-pointer"
+                  className="flex-shrink-0 self-start sm:self-center cursor-pointer ml-4"
                 >
                   <mask
                     id="mask0_219_909"
@@ -412,8 +462,11 @@ function AddNewItem() {
             <div className="w-full">
               <label
                 htmlFor="purchaseCost"
-                className="block text-sm font-medium text-gray-700 mb-2"
-                style={labelStyle}
+                className="block font-medium text-black mb-2 text-[18px] sm:text-[18px] md:text-[18px] lg:text-[18px] ml-4"
+                style={{
+                  fontFamily: "Poppins",
+                  lineHeight: "1.5",
+                }}
               >
                 Purchase Cost (INR)
               </label>
@@ -445,8 +498,11 @@ function AddNewItem() {
           <div className="mt-6 sm:mt-8 w-full">
             <label
               htmlFor="receipt"
-              className="block text-sm font-medium text-gray-700 mb-2"
-              style={labelStyle}
+              className="block font-medium text-black mb-2 text-[18px] sm:text-[18px] md:text-[18px] lg:text-[18px] ml-4"
+              style={{
+                fontFamily: "Poppins",
+                lineHeight: "1.5",
+              }}
             >
               Upload Receipt
             </label>
@@ -482,7 +538,7 @@ function AddNewItem() {
             <button
               onClick={handleCancel}
               className="w-full sm:w-auto px-4 sm:px-6 py-2 border border-gray-300 text-black bg-white rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-colors"
-              style={{ 
+              style={{
                 outline: "none",
                 fontFamily: "Poppins",
                 fontWeight: 600,
@@ -490,7 +546,7 @@ function AddNewItem() {
                 fontSize: "16px",
                 lineHeight: "100%",
                 letterSpacing: "0%",
-                textAlign: "center"
+                textAlign: "center",
               }}
             >
               Cancel
@@ -498,7 +554,7 @@ function AddNewItem() {
             <button
               onClick={handleGenerateQR}
               className="w-full sm:w-auto px-4 sm:px-6 py-2 bg-white text-black border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-colors"
-              style={{ 
+              style={{
                 outline: "none",
                 fontFamily: "Poppins",
                 fontWeight: 600,
@@ -506,7 +562,7 @@ function AddNewItem() {
                 fontSize: "16px",
                 lineHeight: "100%",
                 letterSpacing: "0%",
-                textAlign: "center"
+                textAlign: "center",
               }}
             >
               Generate QR Code
@@ -514,7 +570,7 @@ function AddNewItem() {
             <button
               onClick={handleSaveItem}
               className="w-full sm:w-auto px-4 sm:px-6 py-2 bg-white text-black border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-colors"
-              style={{ 
+              style={{
                 outline: "none",
                 fontFamily: "Poppins",
                 fontWeight: 600,
@@ -522,7 +578,7 @@ function AddNewItem() {
                 fontSize: "16px",
                 lineHeight: "100%",
                 letterSpacing: "0%",
-                textAlign: "center"
+                textAlign: "center",
               }}
             >
               Save Item
@@ -535,8 +591,9 @@ function AddNewItem() {
               outline: none !important;
             }
 
-            html, body {
-              background-color: #FFFFFF !important;
+            html,
+            body {
+              background-color: #ffffff !important;
               margin: 0;
               padding: 0;
             }
@@ -612,7 +669,9 @@ function AddNewItem() {
             }
 
             @media (max-width: 480px) {
-              input, select, textarea {
+              input,
+              select,
+              textarea {
                 font-size: 16px !important; /* Prevents zoom on iOS */
               }
             }
