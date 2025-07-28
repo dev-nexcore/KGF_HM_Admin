@@ -1,6 +1,5 @@
 "use client"
 import { useState } from "react"
-
 const staffMembers = ["Chimney Gowande", "Sullivan Khan", "John Doe", "Jane Smith", "Mike Johnson"]
 
 export default function ProcessStaffSalary() {
@@ -34,25 +33,17 @@ export default function ProcessStaffSalary() {
   }
 
   return (
-    <div className="min-h-screen mt-5 p-4 sm:p-6">
-      <div className="max-w-7xl mx-auto">
-        {/* Header with red line (left aligned) */}
+    <div className="min-h-screen bg-gray-50 p-4 sm:p-6">
+      <div className="max-w-2xl mx-auto">
+        {/* Header with red line */}
         <div className="flex items-center gap-2 mb-6 sm:mb-8">
           <div className="w-1 h-6 bg-red-500"></div>
           <h1 className="text-xl sm:text-2xl font-semibold text-gray-900">Process Staff Salary</h1>
         </div>
 
         {/* Form Container */}
-        <div
-          className="rounded-2xl p-6 sm:p-8 shadow-lg max-w-3xl mx-auto"
-          style={{
-            backgroundColor: "#BEC5AD",
-            boxShadow: "0 4px 12px rgba(138, 151, 116, 0.4)",
-          }}
-        >
-          <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-6 sm:mb-8">
-            Enter Staff Payment Details
-          </h2>
+        <div className="rounded-2xl p-6 sm:p-8 shadow-sm" style={{ backgroundColor: "#ADCE8C" }}>
+          <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-6 sm:mb-8">Enter Staff Payment Details</h2>
 
           <div className="space-y-5 sm:space-y-6">
             {/* Select Staff Member */}
