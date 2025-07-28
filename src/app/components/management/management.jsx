@@ -229,21 +229,14 @@ const StudentManagement = () => {
       style={{ fontFamily: "Poppins", fontWeight: "500" }}
     >
       {/* Header */}
-      <div className="w-full max-w-7xl mx-auto mb-6">
+      <div className="w-full max-w-7xl mx-auto mb-8 px-4">
         <h1
-          className="font-bold text-black text-xl sm:text-2xl lg:text-3xl"
+          className="text-[25px] leading-[25px] font-extrabold text-[#000000] text-left"
           style={{
             fontFamily: "Inter",
-            fontWeight: "700",
-            lineHeight: "100%",
-            color: "#000000",
-            textAlign: "left",
           }}
         >
-          <span
-            className="border-l-4 border-red-500 pl-2"
-            style={{ display: "inline-block" }}
-          >
+          <span className="border-l-4 border-red-500 pl-2 inline-flex items-center h-[25px]">
             Student Management
           </span>
         </h1>
@@ -264,7 +257,7 @@ const StudentManagement = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {/* Student Name */}
           <div>
-            <label className="block mb-1 text-black" style={labelStyle}>
+            <label className="block mb-1 text-black ml-2" style={labelStyle}>
               Student Name
             </label>
             <input
@@ -273,7 +266,8 @@ const StudentManagement = () => {
               value={formData.studentName}
               onChange={handleInputChange}
               placeholder="Enter your Name"
-              className="w-full px-4 bg-white rounded-[10px] border-0 outline-none placeholder-gray-500 text-black"
+              className="w-full px-4 bg-white rounded-[10px] border-0 outline-none placeholder-gray-500 text-black 
+             font-semibold text-[12px] leading-[100%] tracking-normal text-left font-[Poppins]"
               style={inputStyle}
               required
             />
@@ -281,7 +275,7 @@ const StudentManagement = () => {
 
           {/* Student ID */}
           <div>
-            <label className="block mb-1 text-black" style={labelStyle}>
+            <label className="block mb-1 text-black ml-2" style={labelStyle}>
               Student ID
             </label>
             <input
@@ -290,7 +284,8 @@ const StudentManagement = () => {
               value={formData.studentId}
               onChange={handleInputChange}
               placeholder="Enter your ID"
-              className="w-full px-4 bg-white rounded-[10px] border-0 outline-none placeholder-gray-500 text-black"
+              className="w-full px-4 bg-white rounded-[10px] border-0 outline-none placeholder-gray-500 text-black 
+             font-semibold text-[12px] leading-[100%] tracking-normal text-left font-[Poppins]"
               style={inputStyle}
               disabled={editingStudent}
               required
@@ -299,7 +294,7 @@ const StudentManagement = () => {
 
           {/* Contact Number */}
           <div>
-            <label className="block mb-1 text-black" style={labelStyle}>
+            <label className="block mb-1 text-black ml-2" style={labelStyle}>
               Contact Number
             </label>
             <input
@@ -308,7 +303,8 @@ const StudentManagement = () => {
               value={formData.contactNumber}
               onChange={handleInputChange}
               placeholder="Enter your Phone Number"
-              className="w-full px-4 bg-white rounded-[10px] border-0 outline-none placeholder-gray-500 text-black"
+              className="w-full px-4 bg-white rounded-[10px] border-0 outline-none placeholder-gray-500 text-black 
+             font-semibold text-[12px] leading-[100%] tracking-normal text-left font-[Poppins]"
               style={inputStyle}
               required
             />
@@ -316,7 +312,7 @@ const StudentManagement = () => {
 
           {/* Email */}
           <div>
-            <label className="block mb-1 text-black" style={labelStyle}>
+            <label className="block mb-1 text-black ml-2" style={labelStyle}>
               E-Mail
             </label>
             <input
@@ -325,7 +321,8 @@ const StudentManagement = () => {
               value={formData.email}
               onChange={handleInputChange}
               placeholder="Enter E-Mail"
-              className="w-full px-4 bg-white rounded-[10px] border-0 outline-none placeholder-gray-500 text-black"
+              className="w-full px-4 bg-white rounded-[10px] border-0 outline-none placeholder-gray-500 text-black 
+             font-semibold text-[12px] leading-[100%] tracking-normal text-left font-[Poppins]"
               style={inputStyle}
               required
             />
@@ -333,18 +330,32 @@ const StudentManagement = () => {
 
           {/* Room/Bed Number */}
           <div>
-            <label className="block mb-1 text-black" style={labelStyle}>
+            <label className="block mb-1 text-black font-[500] text-[18px] leading-[22px] text-left ml-2">
               Room/Bed Number
             </label>
-            <div className="relative">
+
+            <div
+              className="relative"
+              style={{ width: "530px", height: "40px" }}
+            >
               <select
                 name="roomBed"
                 value={formData.roomBed}
                 onChange={handleInputChange}
-                className="w-full px-4 bg-white rounded-[10px] border-0 outline-none appearance-none cursor-pointer text-black"
-                style={inputStyle}
+                className={`w-full h-full px-4 bg-white rounded-[10px] border-0 outline-none cursor-pointer appearance-none
+        text-[12px] leading-[22px] font-semibold font-[Poppins] 
+        ${formData.roomBed === "" ? "text-[#0000008A]" : "text-black"}`}
+                style={{
+                  WebkitAppearance: "none", // For Safari
+                  MozAppearance: "none", // For Firefox
+                  appearance: "none", // For other modern browsers
+                  boxShadow: "0px 4px 10px 0px #00000040", // Shadow applied
+                  paddingLeft: "1rem",
+                }}
               >
-                <option value="">Select Category</option>
+                <option value="" disabled hidden>
+                  Select Category
+                </option>
                 <option value="Room-A-101">Room-A-101</option>
                 <option value="Room-A-102">Room-A-102</option>
                 <option value="Room-A-103">Room-A-103</option>
@@ -352,24 +363,26 @@ const StudentManagement = () => {
                 <option value="Room-B-102">Room-B-102</option>
                 <option value="Room-B-103">Room-B-103</option>
               </select>
-              <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
-                <svg
-                  className="w-4 h-4 fill-current text-gray-700"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
+
+              {/* Custom arrow */}
+              <svg
+                className="pointer-events-none absolute right-10 top-1/2 transform -translate-y-1/2 w-7 h-6 text-black"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.293l3.71-4.06a.75.75 0 111.08 1.04l-4.25 4.65a.75.75 0 01-1.08 0l-4.25-4.65a.75.75 0 01.02-1.06z"
+                  clipRule="evenodd"
+                />
+              </svg>
             </div>
           </div>
 
           {/* Emergency Contact Number */}
           <div>
-            <label className="block mb-1 text-black" style={labelStyle}>
+            <label className="block mb-2 text-black ml-2" style={labelStyle}>
               Emergency Contact Number
             </label>
             <input
@@ -378,46 +391,73 @@ const StudentManagement = () => {
               value={formData.emergencyContact}
               onChange={handleInputChange}
               placeholder="Enter Contact Number"
-              className="w-full px-4 bg-white rounded-[10px] border-0 outline-none placeholder-gray-500 text-black"
+              className="w-full px-4 bg-white rounded-[10px] border-0 outline-none placeholder-gray-500 text-black 
+             font-semibold text-[12px] leading-[100%] tracking-normal text-left font-[Poppins]"
               style={inputStyle}
             />
           </div>
 
           {/* Admission Date */}
           <div>
-            <label className="block mb-1 text-black" style={labelStyle}>
+            <label className="block mb-1 text-black ml-2" style={labelStyle}>
               Admission Date
             </label>
             <div className="relative flex items-center">
-              <input
-                ref={dateInputRef}
-                type="date"
-                name="admissionDate"
-                value={
-                  formData.admissionDate
-                    ? formData.admissionDate.split("-").reverse().join("-")
-                    : ""
-                }
-                onChange={(e) => {
-                  if (e.target.value) {
-                    const selectedDate = new Date(e.target.value);
-                    const formattedDate = `${selectedDate
-                      .getDate()
-                      .toString()
-                      .padStart(2, "0")}-${(selectedDate.getMonth() + 1)
-                      .toString()
-                      .padStart(2, "0")}-${selectedDate.getFullYear()}`;
-                    setFormData((prev) => ({
-                      ...prev,
-                      admissionDate: formattedDate,
-                    }));
-                  } else {
-                    setFormData((prev) => ({ ...prev, admissionDate: "" }));
-                  }
-                }}
-                className="bg-white rounded-[10px] border-0 outline-none px-4 text-black [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-inner-spin-button]:hidden [&::-webkit-outer-spin-button]:hidden"
-                style={{ ...inputStyle, width: "300px", colorScheme: "light" }}
-              />
+              <div className="relative w-[300px] max-w-full">
+                <div className="relative w-[300px]">
+                  {/* Hidden native date input */}
+                  <input
+                    ref={dateInputRef}
+                    type="date"
+                    name="admissionDate"
+                    value={
+                      formData.admissionDate
+                        ? formData.admissionDate.split("-").reverse().join("-")
+                        : ""
+                    }
+                    onChange={(e) => {
+                      if (e.target.value) {
+                        const selectedDate = new Date(e.target.value);
+                        const formattedDate = `${selectedDate
+                          .getDate()
+                          .toString()
+                          .padStart(2, "0")}-${(selectedDate.getMonth() + 1)
+                          .toString()
+                          .padStart(2, "0")}-${selectedDate.getFullYear()}`;
+                        setFormData((prev) => ({
+                          ...prev,
+                          admissionDate: formattedDate,
+                        }));
+                      } else {
+                        setFormData((prev) => ({ ...prev, admissionDate: "" }));
+                      }
+                    }}
+                    className="absolute top-0 left-0 w-full h-full opacity-0 z-20 cursor-pointer"
+                    style={{ colorScheme: "light" }}
+                  />
+
+                  {/* Styled fake input that displays the selected date */}
+                  <div
+                    className="bg-white rounded-[10px]  px-4 
+            h-[38px] flex items-center font-[Poppins] font-semibold text-[15px] 
+            tracking-widest text-gray-800 select-none z-10 shadow-[0px_4px_10px_0px_#00000040]"
+                  >
+                    {formData.admissionDate || ""}
+                  </div>
+
+                  {/* Placeholder spacing */}
+                  {!formData.admissionDate && (
+                    <div
+                      className="absolute top-1/2 left-4 -translate-y-1/2 z-0
+              text-gray-500 font-[Poppins] font-semibold text-[15px]
+              tracking-[0.3em] pointer-events-none select-none"
+                    >
+                      d&nbsp;d&nbsp;-&nbsp;m&nbsp;m&nbsp;-&nbsp;y&nbsp;y&nbsp;y&nbsp;y
+                    </div>
+                  )}
+                </div>
+              </div>
+
               <button
                 type="button"
                 onClick={handleCalendarClick}
@@ -455,7 +495,10 @@ const StudentManagement = () => {
 
           {/* Emergency Contact Name */}
           <div>
-            <label className="block mb-1 text-black" style={labelStyle}>
+            <label
+              className="block mb-2 text-black font-[500] text-[10px]  ml-2"
+              style={labelStyle}
+            >
               Emergency Contact Name
             </label>
             <input
@@ -464,24 +507,36 @@ const StudentManagement = () => {
               value={formData.emergencyContactName}
               onChange={handleInputChange}
               placeholder="Enter Name"
-              className="w-full px-4 bg-white rounded-[10px] border-0 outline-none placeholder-gray-500 text-black"
+              className="w-full px-4 bg-white rounded-[10px] border-0 outline-none placeholder-gray-500 text-black 
+             font-semibold text-[12px] leading-[100%] tracking-normal text-left font-[Poppins]"
               style={inputStyle}
             />
           </div>
 
           {/* Fee Status */}
           <div>
-            <label className="block mb-1 text-black" style={labelStyle}>
+            <label
+              className="block mb-2 text-black font-[500] text-[10px] ml-2"
+              style={labelStyle}
+            >
               Fee Status
             </label>
+
             <input
               type="text"
               name="feeStatus"
               value={formData.feeStatus}
               onChange={handleInputChange}
               placeholder="Paid"
-              className="w-full px-4 bg-white rounded-[10px] border-0 outline-none placeholder-gray-500 text-black"
-              style={inputStyle}
+              className="px-4 bg-white rounded-[10px] border-0 outline-none 
+      text-black text-[12px] font-[Poppins] font-semibold 
+      placeholder:font-[600] placeholder:font-[Poppins] placeholder-gray-500"
+              style={{
+                ...inputStyle,
+                width: "300px",
+                maxWidth: "100%",
+                paddingLeft: "1rem",
+              }}
             />
           </div>
         </div>
@@ -490,14 +545,15 @@ const StudentManagement = () => {
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <button
             onClick={editingStudent ? handleUpdate : handleSubmit}
-            className="mt-6 px-6 py-2 bg-white text-black rounded-[10px] shadow hover:bg-gray-200 transition-colors"
+            className="mt-6 px-6 py-2 bg-white text-black rounded-[10px] shadow hover:bg-gray-200 transition-colors font-[Poppins]"
             style={{
               fontWeight: "600",
-              fontSize: "22px",
+              fontSize: "15px",
             }}
           >
             {editingStudent ? "Update Student" : "Register Student"}
           </button>
+
           {editingStudent && (
             <button
               type="button"
