@@ -1,5 +1,6 @@
+import AdminLogin from "@/components/adminlogin/login";
 
-import AdminLogin from "@/app/components/adminlogin/login";
+
 
 function Login() {
   return (
