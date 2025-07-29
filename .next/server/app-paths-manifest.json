@@ -1,6 +1,0 @@
-{
-  "/management/page": "app/management/page.js",
-  "/newitem/page": "app/newitem/page.js",
-  "/page": "app/page.js",
-  "/staffallotment/page": "app/staffallotment/page.js"
-}
