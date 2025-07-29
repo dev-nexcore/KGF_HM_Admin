@@ -41,12 +41,12 @@ export default function Sidebar() {
     {
       label: "Staff Allotment",
       icon: "/photos/staff.png",
-      href: "/staff-allotment",
+      href: "/staffallotment",
     },
     {
       label: "Staff Salary & Deductions",
       icon: "/photos/salary.png",
-      href: "/salary",
+      href: "/staffsalary",
     },
     {
       label: "Tickets and Queries",
