@@ -58,10 +58,7 @@ const Refunds = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }))
+    setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
   const handleCancel = () => {
@@ -78,7 +75,7 @@ const Refunds = () => {
   }
 
   const getStatusBadge = (status) => {
-    const baseClasses = "px-3 py-1 rounded-full text-xs font-medium"
+    const baseClasses = "px-3 py-1 rounded-full text-xs font-semibold"
     switch (status) {
       case "Completed":
         return `${baseClasses} bg-green-500 text-white`
@@ -92,64 +89,59 @@ const Refunds = () => {
   }
 
   return (
-    <div className="flex-1 p-6 bg-gray-50 min-h-screen">
-      {/* Page Header */}
-      <div className="mb-6">
-        <h1 className="text-2xl font-semibold text-gray-800">Refunds</h1>
-      </div>
+    <div className="flex flex-col gap-8 p-8 bg-white min-h-screen w-full">
+      <h1 className="text-xl font-bold text-black">Refunds</h1>
 
-      {/* Initiate New Refund Section */}
-      <div className="bg-[#cbd0bb] rounded-lg p-6 mb-6">
-        <h2 className="text-lg font-semibold text-gray-800 mb-4">Initiate New Refund</h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-          {/* Student/Resident ID */}
+      {/* Initiate New Refund */}
+      <div
+        className="rounded-lg px-8 py-6"
+        style={{
+          backgroundColor: "#BEC5AD",
+          boxShadow: "0px 4px 20px 0px #00000040 inset",
+        }}
+      >
+        <h2 className="text-xl font-semibold text-black mb-6">Initiate New Refund</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Student / Resident ID</label>
+            <label className="text-sm font-medium text-black mb-2 block">Student / Resident ID</label>
             <input
               type="text"
               name="studentId"
               value={formData.studentId}
               onChange={handleInputChange}
               placeholder="Enter Student ID/ Resident ID"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+              className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black"
             />
           </div>
-
-          {/* Refund Amount */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Refund Amount</label>
+            <label className="text-sm font-medium text-black mb-2 block">Refund Amount</label>
             <input
               type="text"
               name="refundAmount"
               value={formData.refundAmount}
               onChange={handleInputChange}
               placeholder="Enter Amount"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+              className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black"
             />
           </div>
-
-          {/* Reason For Refund */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Reason For Refund</label>
+            <label className="text-sm font-medium text-black mb-2 block">Reason For Refund</label>
             <input
               type="text"
               name="reason"
               value={formData.reason}
               onChange={handleInputChange}
               placeholder="Enter Reason"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+              className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black"
             />
           </div>
-
-          {/* Payment Method */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Payment Method</label>
+            <label className="text-sm font-medium text-black mb-2 block">Payment Method</label>
             <select
               name="paymentMethod"
               value={formData.paymentMethod}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+              className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black"
             >
               <option value="">Select Method</option>
               <option value="bank_transfer">Bank Transfer</option>
@@ -160,85 +152,73 @@ const Refunds = () => {
           </div>
         </div>
 
-        {/* Action Buttons */}
-        <div className="flex gap-4">
+        <div className="flex gap-4 justify-center">
           <button
             onClick={handleCancel}
-            className="px-6 py-2 bg-white text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="bg-white border border-gray-400 px-6 py-2 rounded-md font-medium text-black hover:bg-gray-100"
           >
             Cancel
           </button>
           <button
             onClick={handleProceedToPay}
-            className="px-6 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="bg-white text-black px-6 py-2 rounded-md font-medium hover:bg-gray-900"
           >
             Proceed To Pay
           </button>
         </div>
       </div>
 
-      {/* Refund History Section */}
-      <div className="bg-white rounded-lg shadow-sm">
-        {/* Header with Search */}
-        <div className="p-4 border-b border-gray-200">
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="text-lg font-semibold text-gray-800">Refund History</h2>
-          </div>
-
-          <div className="flex gap-2">
+      {/* Refund History */}
+      <div
+        className="rounded-lg px-6 py-4"
+        style={{
+          backgroundColor: "#BEC5AD",
+          boxShadow: "0px 4px 20px 0px #00000040 inset",
+        }}
+      >
+        <div className="flex flex-col md:flex-row justify-between items-center mb-4 gap-3">
+          <h2 className="text-lg font-semibold text-black">Refund History</h2>
+          <div className="flex gap-2 w-full md:w-auto">
             <div className="relative flex-1">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 w-4 h-4" />
               <input
                 type="text"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Search For Refunds"
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black"
               />
             </div>
-            <button className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 flex items-center gap-2">
+            <button className="flex items-center gap-2 bg-[#50B848] text-white px-4 py-2 rounded-md hover:bg-green-600">
               <Filter className="w-4 h-4" />
               Filter
             </button>
           </div>
         </div>
 
-        {/* Table */}
         <div className="overflow-x-auto">
-          <table className="w-full">
-            <thead className="bg-gray-50">
+          <table className="w-full bg-white rounded-md overflow-hidden text-sm text-left">
+            <thead className="bg-[#BEC5AD] text-black">
               <tr>
-                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-r border-gray-200">
-                  Date
-                </th>
-                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-r border-gray-200">
-                  Recipient Name
-                </th>
-                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-r border-gray-200">
-                  Amount
-                </th>
-                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-r border-gray-200">
-                  Reason
-                </th>
-                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-r border-gray-200">
-                  Status
-                </th>
-                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Processed By
-                </th>
+                <th className="px-4 py-3 border border-gray-300">Date</th>
+                <th className="px-4 py-3 border border-gray-300">Recipient Name</th>
+                <th className="px-4 py-3 border border-gray-300">Amount</th>
+                <th className="px-4 py-3 border border-gray-300">Reason</th>
+                <th className="px-4 py-3 border border-gray-300">Status</th>
+                <th className="px-4 py-3 border border-gray-300">Processed By</th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
-              {refundHistory.map((refund, index) => (
-                <tr key={index} className="hover:bg-gray-50">
-                  <td className="px-4 py-3 text-sm text-gray-900 border-r border-gray-200">{refund.date}</td>
-                  <td className="px-4 py-3 text-sm text-gray-900 border-r border-gray-200">{refund.recipientName}</td>
-                  <td className="px-4 py-3 text-sm text-gray-900 border-r border-gray-200">{refund.amount}</td>
-                  <td className="px-4 py-3 text-sm text-gray-900 border-r border-gray-200">{refund.reason}</td>
-                  <td className="px-4 py-3 text-sm border-r border-gray-200">
+            <tbody className="bg-white text-black">
+              {refundHistory.map((refund, idx) => (
+                <tr key={idx} className="border-t border-gray-200">
+                  <td className="px-4 py-3 border border-gray-300">{refund.date}</td>
+                  <td className="px-4 py-3 border border-gray-300">{refund.recipientName}</td>
+                  <td className="px-4 py-3 border border-gray-300">{refund.amount}</td>
+                  <td className="px-4 py-3 border border-gray-300">{refund.reason}</td>
+                  <td className="px-4 py-3 border border-gray-300">
                     <span className={getStatusBadge(refund.status)}>{refund.status}</span>
                   </td>
-                  <td className="px-4 py-3 text-sm text-gray-900">{refund.processedBy}</td>
+                  <td className="px-4 py-3 border border-gray-300">{refund.processedBy}</td>
                 </tr>
               ))}
             </tbody>
