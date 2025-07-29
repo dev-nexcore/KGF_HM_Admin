@@ -12,24 +12,25 @@ export default function AuditLogsSection() {
       user: "Chinmay\nGawade",
       action: "Student Registered",
       description: "Registered New Student Chinmay Gawade(ID:101)",
-      ip: "192.168.1.101",
+      // ip removed
     },
     {
       timestamp: "25-10-2025\n14:00:30",
       user: "Chinmay\nGawade",
       action: "Notice Issued",
       description: "Issued Notice 'Hotel Maintenance Schedule'",
-      ip: "192.168.1.101",
+      // ip removed
     },
     {
       timestamp: "25-10-2025\n14:00:30",
       user: "Chinmay\nGawade",
       action: "Leave Approved",
       description: "Approved Leave Request For Warden C",
-      ip: "192.168.1.101",
+      // ip removed
     },
   ];
 
+  // Update filter to exclude 'ip' since it's removed
   const filteredLogs = logs.filter((log) =>
     Object.values(log).some((value) =>
       value.toLowerCase().includes(searchTerm.toLowerCase())
@@ -77,62 +78,57 @@ export default function AuditLogsSection() {
         <div className="overflow-hidden">
           <table className="w-full text-sm sm:text-base text-left text-black border-separate border-spacing-y-2">
             <thead>
-              <tr className="bg-white font-semibold text-black">
-                <th className="px-4 py-3 border-r border-white whitespace-nowrap text-[16px] sm:text-xl">
-                  TimeStamp
-                </th>
-                <th className="px-4 py-3 border-r border-white whitespace-nowrap text-[16px] sm:text-xl">
-                  User
-                </th>
-                <th className="px-4 py-3 border-r border-white whitespace-nowrap text-center text-[16px] sm:text-xl">
-                  Action Type
-                </th>
-                <th className="px-4 py-3 border-r border-white text-[16px] sm:text-xl">
-                  Description
-                </th>
-                <th className="px-4 py-3 whitespace-nowrap text-[16px] sm:text-xl">
-                  IP Address
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {filteredLogs.length > 0 ? (
-                filteredLogs.map((log, index) => (
-                  <tr
-                    key={index}
-                    className="bg-[#A4B494] even:bg-opacity-90 hover:bg-[#90A884] transition-all rounded-md"
-                  >
-                    <td className="px-4 py-2 whitespace-pre-line font-semibold text-[15px] sm:text-xl">
-                      {log.timestamp}
-                    </td>
-                    <td className="px-4 py-2 whitespace-pre-line font-semibold text-[15px] sm:text-xl">
-                      {log.user}
-                    </td>
-                    <td className="px-4 py-2 text-center font-semibold text-[15px] sm:text-xl">
-                      <div className="flex flex-col items-center justify-center h-full space-y-0.5">
-                        {log.action.split(" ").map((word, i) => (
-                          <div key={i} className={getColorForWord(word)}>
-                            {word}
-                          </div>
-                        ))}
-                      </div>
-                    </td>
-                    <td className="px-4 py-2 font-semibold text-[15px] sm:text-xl">
-                      {log.description}
-                    </td>
-                    <td className="px-4 py-2 whitespace-nowrap font-semibold text-[15px] sm:text-xl">
-                      {log.ip}
-                    </td>
-                  </tr>
-                ))
-              ) : (
-                <tr>
-                  <td colSpan={5} className="text-center py-6 font-medium">
-                    No logs found.
-                  </td>
-                </tr>
-              )}
-            </tbody>
+  <tr className="bg-white font-semibold text-black">
+    <th className="px-4 py-3 border-r border-white whitespace-nowrap text-sm sm:text-base">
+      TimeStamp
+    </th>
+    <th className="px-4 py-3 border-r border-white whitespace-nowrap text-sm sm:text-base">
+      User
+    </th>
+    <th className="px-4 py-3 border-r border-white whitespace-nowrap text-center text-sm sm:text-base">
+      Action Type
+    </th>
+    <th className="px-4 py-3 border-r border-white text-center text-sm sm:text-base">
+      Description
+    </th>
+  </tr>
+</thead>
+<tbody>
+  {filteredLogs.length > 0 ? (
+    filteredLogs.map((log, index) => (
+      <tr
+        key={index}
+        className="bg-[#A4B494] even:bg-opacity-90 hover:bg-[#90A884] transition-all rounded-md"
+      >
+        <td className="px-4 py-2 whitespace-pre-line font-semibold text-sm sm:text-base">
+          {log.timestamp}
+        </td>
+        <td className="px-4 py-2 whitespace-pre-line font-semibold text-sm sm:text-base">
+          {log.user}
+        </td>
+        <td className="px-4 py-2 text-center font-semibold text-sm sm:text-base">
+          <div className="flex flex-col items-center justify-center h-full space-y-0.5">
+            {log.action.split(" ").map((word, i) => (
+              <div key={i} className={getColorForWord(word)}>
+                {word}
+              </div>
+            ))}
+          </div>
+        </td>
+        <td className="px-4 py-2 font-semibold text-center text-sm sm:text-base">
+          {log.description}
+        </td>
+      </tr>
+    ))
+  ) : (
+    <tr>
+      <td colSpan={4} className="text-center py-6 font-medium">
+        No logs found.
+      </td>
+    </tr>
+  )}
+</tbody>
+
           </table>
         </div>
       </div>
